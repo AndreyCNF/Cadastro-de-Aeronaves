@@ -1,0 +1,31 @@
+body {
+	background-color: #e0e0e0 ;
+}
+
+.grupo{
+	width: 32%;
+	display: inline-block;
+	padding: 10px 0px;
+}
+
+
+
+.grupo input::placeholder, .container input::placeholder{
+color: #bdbdbd ;
+}
+
+#form-adiciona label, .container label {
+	color: black;
+}
+.invisivel {
+	display: none;
+}
+.grupo input[type=text]:focus {
+	border-bottom: 2px solid #e65100  !important; 
+	box-shadow: 0 1px 0 0 #e65100 !important;
+}
+
+.select {
+	color: #e65100 !important ;
+}
+

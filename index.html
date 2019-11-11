@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        
+        <title> Cadastro de Aeronaves - Laranja Linhas Aéreas</title>
+        
+        
+        <link href="css/materialize/css/materialize.css" rel="stylesheet">
+        <link href="css/materialize/css/materialize.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="css/index.css" rel="stylesheet">
+        
+        
+	</head>
+	<body>
+
+		<header>
+                <nav class="nav-wrapper orange darken-4">
+                        <div class="container">
+                          <a href="/"  class="brand-logo" >Céu Azul Linhas Aéreas</a>
+                          <ul class="right hide-on-med-and-down">
+                            <li><a href='/rotas'>Rotas</a></li>
+                            <li><a href='/sobre'>Sobre</a></li>
+                          </ul>
+                        </div>
+                      </nav>
+		</header>
+
+			<section class="container">
+	<h4 id="titulo-form">Adicionar nova aeronave</h4>
+	<ul id="mensagens-erro">
+		<li></li>
+	</ul>
+    <form id="form-adiciona">
+        <div class="grupo">
+            <label for="nome">Nome:</label>
+            <input id="nome" name="nome" type="text" placeholder="digite o nome da nova aeronave" class="campo">
+        </div>
+        <div class="grupo ">
+            <label for="altura">Altura(m):</label>
+            <input id="altura" name="altura" type="text" placeholder="digite a altura" class="campo campo-medio">
+        </div>
+        <div  class="grupo input-field">
+            <select id="categoria" class="select">
+              <option value="" class="select" disabled selected>Selecione a Categoria</option>
+              <option value="1">A</option>
+              <option value="2">B</option>
+              <option value="3">C</option>
+            </select>
+            <label>Categoria</label>
+          </div>
+        <div class="grupo ">
+                <label for="largura">Largura(m):</label>
+                <input id="largura" name="largura" type="text" placeholder="digite a largura " class="campo campo-medio">
+        </div>
+        <div class="grupo">
+                <label for="comprimento">Comprimento:</label>
+                <input id="comprimento" name="comprimento" type="text" placeholder="digite a comprimento" class="campo campo-medio">
+        </div>
+
+        <div class="grupo ">
+                <label for="pmd">PMD(kg):</label>
+                <input id="pmd" name="pmd" type="text" placeholder="digite o Peso Máximo de Decolagem" class="campo campo-medio">
+        </div>
+        <div class="grupo ">
+                <label for="pax">Cap. Max. Passageiros:</label>
+                <input id="pax" name="pax" type="text" placeholder="digite a capacidade máxima de passageiros" class="campo campo-medio">
+        </div>
+        <div class="grupo ">
+                <label for="fabricante">Fabricante:</label>
+                <input id="fabricante" name="fabricante" type="text" placeholder="digite o fabricante" class="campo campo-medio">
+        </div>
+        <div class="grupo ">
+                <label for="iata">Cod. IATA:</label>
+                <input id="iata" name="iata" type="text" placeholder="digite o IATA" class="campo campo-medio">
+        </div>
+        <div class="grupo ">
+                <label for="icao">ICAO:</label>
+                <input id="icao" name="icao" type="text" placeholder="digite o ICAO" class="campo campo-medio">
+        </div>
+    </form>
+    <button id="adicionar-aeronave" class="botao bto-principal waves-light btn orange darken-4"><i class="material-icons right">airplanemode_active</i>Adicionar</button>
+</section>
+
+<main>
+    <section class="container">
+        <h4>Minhas Aeronaves</h4>
+        <label for="filtrar-tabela"> Search: </label>
+        <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digita O Nome do Paciente">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Altura</th>
+                    <th>Categoria</th>
+                    <th>Largura(m)</th>
+                    <th>PMD(kg)</th>
+                    <th>Cap. Máx. Passageiros</th>
+                    <th>Fabricante</th>
+                    <th>Cod. IATA</th>
+                    <th>Cod. ICAO</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-aeronves">
+                <tr class="aeronaves" id="primeira-aeronave">
+                    <td class="info-nome">Exemplo: Dash</td>                    
+                    <td class="info-altura">4.00</td>
+                    <td class="info-categoria">A</td>
+                    <td class="info-largura">15</td>
+                    <td class="info-pmd">12000</td>
+                    <td class="info-pax">55</td>
+                    <td class="info-fabricante">Dash</td>
+                    <td class="info-iata">Q900</td>
+                    <td class="info-icao">900</td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="buscar-aeronave" class="botao bto-principal  waves-light btn orange darken-4"><i class="material-icons right">search</i>Buscar Aeronaves</button>
+    </section>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="css/materialize/js/materialize.js"> </script>
+<script src="css/materialize/js/materialize.min.js"></script>
+<script src="js/restricoes.js"></script>
+<script src="js/adiciona-aeronave.js"></script>
+<script src="js/tabela.js"></script>
+<script src="js/form.js"></script>
+
+
+
+
+
+	</body>
+
+</html>
